@@ -1,0 +1,36 @@
+.header {
+    background-color: orange;
+    padding: 20px 0;
+}
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo,
+.header__location,
+.header__contact {
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.header__location span {
+    color: rgb(57, 57, 241);
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.header__logo {
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+}

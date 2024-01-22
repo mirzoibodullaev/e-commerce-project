@@ -1,0 +1,9 @@
+.navbar__content {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__content li:not(:last-child) {
+    margin-right: 25px;
+    cursor: pointer;
+}
