@@ -3,7 +3,10 @@
     align-items: center;
 }
 
-.navbar__content li:not(:last-child) {
-    margin-right: 25px;
+.navbar__item {
     cursor: pointer;
+}
+
+.navbar__item:not(:last-child) {
+    margin-right: 25px;
 }

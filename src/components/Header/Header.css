@@ -1,19 +1,21 @@
 .header {
     background-color: orange;
     padding: 20px 0;
+    position: relative;
 }
 .header__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
-.header__logo,
-.header__location,
-.header__contact {
-    margin-right: 100px;
-    display: flex;
-    align-items: center;
+.header__location {
+    margin-right: 120px;
+}
+
+.header__logo {
+    margin-right: 190px;
 }
 
 .header__location span {
@@ -33,4 +35,29 @@
 .header__content {
     display: flex;
     align-items: center;
+}
+
+.header__under {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+.header__cart {
+    position: relative;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    background-color: #5656ed;
+    margin-left: 15px;
+}
+
+
+.header__search {
+    border-radius: 6px;
+    width: 60%;
+    border: none;
+    padding: 13px;
 }
