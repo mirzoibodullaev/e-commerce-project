@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getProductsData } from "services/getProductsData";
-import { ProductType } from "types/types";
+import { getProductsData } from "../../services/getProductsData";
+import { ProductType } from "../../types/types";
+import { getProductByCategory } from "../../services/getCategories";
 
 interface ProductsState {
     products: ProductType[];
@@ -27,6 +28,17 @@ export const productSlice = createSlice({
         builder.addCase(getProductsData.rejected, (state) => {
             state.isLoading = false;
         });
+
+        builder.addCase(getProductByCategory.pending, (state) => {
+            state.isLoading = true;
+        });
+        builder.addCase(getProductByCategory.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.products = action.payload;
+        });
+        builder.addCase(getProductByCategory.rejected, (state) => {
+            state.isLoading = false;
+        });
     },
 });
 
@@ -34,3 +46,6 @@ export const productReducer = productSlice.reducer;
 
 export const selectProducts = (state: { product: ProductsState }) =>
     state?.product?.products;
+
+export const selectIsLoading = (state: { product: ProductsState }) =>
+    state?.product?.isLoading;

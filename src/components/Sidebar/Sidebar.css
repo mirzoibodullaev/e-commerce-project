@@ -19,3 +19,11 @@
     font-size: 24px;
     margin-bottom: 19px;
 }
+
+.categories__item:hover {
+    color: rgb(32, 158, 32);
+}
+
+.active {
+    color: red;
+}

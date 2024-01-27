@@ -14,8 +14,8 @@ export const getCategoriesData = createAsyncThunk(
         }
     }
 );
-export const getCategoryItems = createAsyncThunk(
-    "categories/getCategoryItems",
+export const getProductByCategory = createAsyncThunk(
+    "categories/getProductByCategory",
     async (item: []) => {
         try {
             const res = await axios.get(

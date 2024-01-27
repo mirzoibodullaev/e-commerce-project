@@ -2,9 +2,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { Navbar } from "components/Navbar/Navbar";
-import { Button } from "UI/Button/Button";
-import { Input } from "UI/Input/Input";
+import { Button } from "../../UI/Button/Button";
+import { Input } from "../../UI/Input/Input";
+import { Navbar } from "../Navbar/Navbar";
 import "./Header.css";
 
 export const Header = () => {

@@ -6,4 +6,3 @@ export interface ProductType {
 }
 
 export type Categories = [];
-export type CategoryItem = []
