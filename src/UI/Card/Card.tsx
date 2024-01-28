@@ -1,9 +1,10 @@
 import "./Card.css";
 
-interface ProductProps {
-    title: string;
-    price: number;
-    thumbnail: string;
+export interface ProductProps {
+    title?: string;
+    price?: number;
+    thumbnail?: string;
+    description?: string;
 }
 
 export const Card = ({ title, price, thumbnail }: ProductProps) => {

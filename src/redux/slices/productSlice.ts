@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getProductsData } from "../../services/getProductsData";
+import {
+    getProductsData,
+} from "../../services/getProductsData";
 import { ProductType } from "../../types/types";
 import { getProductByCategory } from "../../services/getCategories";
 

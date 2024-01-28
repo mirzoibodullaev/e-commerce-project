@@ -5,9 +5,19 @@ import { Link } from "react-router-dom";
 import { Button } from "../../UI/Button/Button";
 import { Input } from "../../UI/Input/Input";
 import { Navbar } from "../Navbar/Navbar";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { setTitleFilter, titleFilter } from "../../redux/slices/filterSlice";
+import { ChangeEvent } from "react";
 import "./Header.css";
 
 export const Header = () => {
+    const title = useAppSelector(titleFilter);
+    const dispatch = useAppDispatch();
+
+    const handleTitleFilterChange = (e: ChangeEvent<HTMLInputElement>) => {
+        dispatch(setTitleFilter(e.target.value));
+    };
+
     return (
         <header className="header">
             <div className="container">
@@ -30,6 +40,8 @@ export const Header = () => {
                 </div>
                 <div className="header__under">
                     <Input
+                        onChange={handleTitleFilterChange}
+                        value={title}
                         className="header__search"
                         placeholder="Search products by SKU or name"
                     />

@@ -8,8 +8,8 @@ import {
     getCategoriesData,
     getProductByCategory,
 } from "../../services/getCategories";
-import "./Sidebar.css";
 import { Skeleton } from "../../UI/Skeleton/Skeleton";
+import "./Sidebar.css";
 
 export const Sidebar = () => {
     const dispatch = useAppDispatch();
